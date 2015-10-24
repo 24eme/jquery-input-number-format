@@ -2,6 +2,8 @@
 
 Jquery plugin to restrict and format input number
 
+Demo page : http://24eme.fr/jquery-input-number-format/example.html
+
 ## Installation
 
 Just include the javascript file :
