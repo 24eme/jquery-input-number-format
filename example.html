@@ -9,20 +9,10 @@
     </head>
     <body>
         <div class="container">
-            
-            <h1>Jquery plugin to restrict and format input number</h1>
-            <h2>Installation and Usage</h2>
-            <div class="row">
-                <div class="form-group col-md-8">
-                    <p>You have just to include the javascript file</p>
-                    <pre>&lt;script src="path/input-number-format.jquery.min.js">&lt;/script&gt;</pre>
-                    <p>Usage</p>
-                    <pre>$('.input-float').inputNumberFormat();</pre>
-                </div>
-            </div>
-
-            <h2>Example</h2>
-            <h3>Basic Float</h3>
+            <h1>Demo jquery input number format</h1>
+            <p class="lead">Jquery plugin to restrict and format input number</p>
+            <p class="lead"><a href="https://github.com/24eme/jquery-input-number-format">Documentation on github</a></p>
+            <h2>Basic Float</h2>
             <div class="row">
                 <div class="form-group col-md-4">
                     <input class="input-float form-control input-lg" type="text" value="" />
@@ -32,7 +22,7 @@
 /* JS   */ $('.input-float').inputNumberFormat();</pre>
                 </div>
             </div>
-            <h3>Custom decimal precision with data</h3>
+            <h2>Custom 4 decimal precision with data</h2>
             <div class="row">
                 <div class="form-group col-md-4">
                     <input class="input-float-4 form-control input-lg" data-decimal="4" data-decimal_auto="4" type="text" value="" />
@@ -42,7 +32,7 @@
 /* JS   */ $('.input-float-4').inputNumberFormat({ 'decimal_auto': 4 });</pre>
                 </div>
             </div>
-            <h3>Integer</h3>
+            <h2>Integer</h2>
             <div class="row"> 
                 <div class="form-group col-md-4">
                     <input class="input-integer form-control input-lg" type="text" value="" />
@@ -52,41 +42,6 @@
 /* JS   */ $('.input-integer').inputNumberFormat({ 'decimal': 0 });</pre>
                 </div>
             </div>
-            <h2>Options</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Option name</th>
-                        <th>Type</th>
-                        <th>Default value</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>decimal</td>
-                    <td>Integer</td>
-                    <td>2</td>
-                    <td>Number of authorized decimal(s)</td>
-                </tr>
-                <tr>
-                    <td>decimal_auto</td>
-                    <td>Integer</td>
-                    <td>2</td>
-                    <td>Number of decimal(s) to add automatically on blur event</td>
-                </tr>
-                <tr>
-                    <td>decimal_separator</td>
-                    <td>String</td>
-                    <td>"."</td>
-                    <td>Seperator to use</td>
-                </tr>
-                <tr>
-                    <td>decimal_separator_authorized</td>
-                    <td>Array of string</td>
-                    <td>[".", ","]</td>
-                    <td>Seperator(s) authorized</td>
-                </tr>
-            </table>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
