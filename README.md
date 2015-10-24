@@ -1,6 +1,6 @@
 # Jquery input number format
 
-Jquery plugin to restrict and format input number.
+Jquery plugin to restrict and format input number
 
 ## Installation
 
@@ -29,7 +29,7 @@ $('.input-float').inputNumberFormat({ 'decimal': 2 });
 * In HTML with data :
 
 ```html
-<input class="input-float" type="text" data-decimal="2"v alue="" />
+<input class="input-float" type="text" data-decimal="2" value="" />
 ```
 
 ### Available options
