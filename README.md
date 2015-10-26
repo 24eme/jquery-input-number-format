@@ -25,7 +25,7 @@ $('.input-float').inputNumberFormat();
 | decimal | Integer       | 2             | Number of decimal authorized                         |
 | decimalAuto | Integer       | 2             | Number of decimal to add automatically on blur event |
 | separator | String        | "."           | Separator to use                                        |
-| separatorAuthorized  | Array (string)| [".", ","]    | Seperators authorized |
+| separatorAuthorized  | Array (string)| [".", ","]    | Separators authorized |
 
 There are 2 differents ways to use options
 
