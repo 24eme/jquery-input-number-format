@@ -1,6 +1,6 @@
 # Jquery input number format
 
-Jquery plugin to restrict and format input number
+Jquery plugin for Input Field Number to restrict entry to float or integer number and autoformat.
 
 Demo page : http://24eme.fr/jquery-input-number-format/example.html
 
@@ -20,25 +20,24 @@ $('.input-float').inputNumberFormat();
 
 ## Options
 
-There are 2 differents ways to use options
-
-* In Javascript :
-
-```javascript
-$('.input-float').inputNumberFormat({ 'decimal': 2 });
-```
-
-* In HTML with data :
-
-```html
-<input class="input-float" type="text" data-decimal="2" value="" />
-```
-
-### Available options
-
 | Name                          | Type          | Default value | Description                                             |
 | ----------------- | ------------- | ------------- | ------------------------------------------------------- |
-| decimal | Integer       | 2             | Number of authorized decimal(s)                         |
-| decimal_auto | Integer       | 2             | Number of decimal(s) to add automatically on blur event |
-| decimal_separator | String        | "."           | Seperator to use                                        |
-| decimal_separator_authorized  | Array (string)| [".", ","]    | Seperator(s) authorized |
+| decimal | Integer       | 2             | Number of decimal authorized                         |
+| decimalAuto | Integer       | 2             | Number of decimal to add automatically on blur event |
+| separator | String        | "."           | Seperator to use                                        |
+| separatorAuthorized  | Array (string)| [".", ","]    | Seperators authorized |
+
+There are 2 differents ways to use options
+
+* Javascript :
+
+```javascript
+$('.input-float').inputNumberFormat({ 'decimal': 4, 'decimalAuto': 4 });
+```
+
+* HTML with data attribute :
+
+```html
+<input class="input-float" type="text" data-decimal="4" data-decimal-auto="4" value="" />
+```
+

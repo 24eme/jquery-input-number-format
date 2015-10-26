@@ -3,9 +3,9 @@
         inputNumberFormat: function(options) {
             this.defaultOptions = {
                 'decimal': 2,
-                'decimal_auto': 2,
-                'decimal_separator': '.',
-                'decimal_separator_authorized': ['.', ',']
+                'decimalAuto': 2,
+                'separator': '.',
+                'separatorAuthorized': ['.', ',']
             };
 
             var settings = $.extend({}, this.defaultOptions, options);
@@ -14,7 +14,7 @@
                 var regexp = "^[0-9]+";
 
                 if(options.decimal) {
-                    regexp += "["+options.decimal_separator_authorized.join("")+"]*[0-9]{0," + options.decimal + "}";
+                    regexp += "["+options.separatorAuthorized.join("")+"]*[0-9]{0," + options.decimal + "}";
                 }
 
                 regexp = new RegExp(regexp + "$");
@@ -29,14 +29,14 @@
                     return formatedValue;
                 }
 
-                formatedValue = formatedValue.replace(",", options.decimal_separator);
+                formatedValue = formatedValue.replace(",", options.separator);
 
-                if(options.decimal && options.decimal_auto) {
-                    if(formatedValue.indexOf(options.decimal_separator) === -1) {
-                        formatedValue += options.decimal_separator;
+                if(options.decimal && options.decimalAuto) {
+                    if(formatedValue.indexOf(options.separator) === -1) {
+                        formatedValue += options.separator;
                     }
 
-                    var nbDecimalToAdd = options.decimal_auto - formatedValue.split(options.decimal_separator)[1].length;
+                    var nbDecimalToAdd = options.decimalAuto - formatedValue.split(options.separator)[1].length;
                     for(var i=1; i <= nbDecimalToAdd; i++) {
                         formatedValue += "0";
                     }
@@ -74,7 +74,8 @@
 
                 $this.on('blur', function(e) {
                     var options = $.extend({}, settings, $(this).data());
-                    $(this).val(formatValue($(this).val(), settings));
+
+                    $(this).val(formatValue($(this).val(), options));
                 });
             });
         }

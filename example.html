@@ -10,9 +10,9 @@
     <body>
         <div class="container">
             <h1>Demo jquery input number format</h1>
-            <p class="lead">Jquery plugin to restrict and format input number</p>
+            <p class="lead">Jquery plugin for Input Field Number to restrict entry to float or integer number and autoformat.</p>
             <p class="lead"><a href="https://github.com/24eme/jquery-input-number-format">Documentation on github</a></p>
-            <h2>Basic Float</h2>
+            <h2>Basic Float <small>2 decimals precision</small></h2>
             <div class="row">
                 <div class="form-group col-md-4">
                     <input class="input-float form-control input-lg" type="text" value="" />
@@ -22,14 +22,14 @@
 /* JS   */ $('.input-float').inputNumberFormat();</pre>
                 </div>
             </div>
-            <h2>Custom 4 decimals precision with data attribute</h2>
+            <h2>Float custom with data attribute <small>4 decimals precision</small></h2>
             <div class="row">
                 <div class="form-group col-md-4">
-                    <input class="input-float-4 form-control input-lg" data-decimal="4" data-decimal_auto="4" type="text" value="" />
+                    <input class="input-float form-control input-lg" data-decimal="4" data-decimal-auto="4" type="text" value="" />
                 </div>
                 <div class="form-group col-md-8">
-<pre>/* HTML */ &lt;input class="input-float-4" data-decimal="4" type="text" value="" /&gt;
-/* JS   */ $('.input-float-4').inputNumberFormat({ 'decimal_auto': 4 });</pre>
+<pre>/* HTML */ &lt;input class="input-float" data-decimal="4" data-decimal-auto="4" type="text" value="" /&gt;
+/* JS   */ $('.input-float').inputNumberFormat();</pre>
                 </div>
             </div>
             <h2>Integer</h2>
@@ -48,7 +48,6 @@
         <script src="input-number-format.jquery.js"></script>
         <script type="text/javascript">
             $('.input-float').inputNumberFormat();
-            $('.input-float-4').inputNumberFormat({ 'decimal_auto': 4 });
             $('.input-integer').inputNumberFormat({ 'decimal': 0 });
         </script>
     </body>
