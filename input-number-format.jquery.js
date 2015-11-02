@@ -66,13 +66,20 @@
                     var val = beginVal + e.key + endVal;
 
                     if(!matchValue(val, options)) {
-                        
-                        return e.preventDefault();
+
+                        e.preventDefault();
+                        return;
                     }
 
                 });
 
                 $this.on('blur', function(e) {
+                    var options = $.extend({}, settings, $(this).data());
+
+                    $(this).val(formatValue($(this).val(), options));
+                });
+
+                $this.on('change', function(e) {
                     var options = $.extend({}, settings, $(this).data());
 
                     $(this).val(formatValue($(this).val(), options));
