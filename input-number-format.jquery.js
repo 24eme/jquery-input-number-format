@@ -32,6 +32,9 @@
                 formatedValue = formatedValue.replace(",", options.separator);
 
                 if(options.decimal && options.decimalAuto) {
+
+                    formatedValue = Math.round(formatedValue*Math.pow(10,options.decimal))/(Math.pow(10,options.decimal))+"";
+
                     if(formatedValue.indexOf(options.separator) === -1) {
                         formatedValue += options.separator;
                     }
