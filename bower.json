@@ -1,0 +1,28 @@
+{
+  "name": "jquery-input-number-format",
+  "homepage": "https://github.com/24eme/jquery-input-number-format",
+  "authors": [
+    "Vincent LAURENT <vince.laurent@gmail.com>"
+  ],
+  "description": "Jquery plugin for Input Field Number to restrict entry to float or integer number and autoformat.",
+  "main": "input-number-format.jquery.min.js",
+  "moduleType": [],
+  "keywords": [
+    "Jquery",
+    "Input",
+    "Float",
+    "Number",
+    "Format"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1"
+  }
+}
