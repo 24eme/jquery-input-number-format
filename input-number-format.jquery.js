@@ -14,7 +14,7 @@
                 var regexp = "^[0-9]+";
 
                 if(options.decimal) {
-                    regexp += "["+options.separatorAuthorized.join("")+"]*[0-9]{0," + options.decimal + "}";
+                    regexp += "["+options.separatorAuthorized.join("")+"]?[0-9]{0," + options.decimal + "}";
                 }
 
                 regexp = new RegExp(regexp + "$");
