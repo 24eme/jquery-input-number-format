@@ -11,16 +11,24 @@
             var settings = $.extend({}, this.defaultOptions, options);
 
             var matchValue = function(value, options) {
+                var found = [];
                 var regexp = "^[0-9]+";
-
                 if(options.decimal) {
                     regexp += "["+options.separatorAuthorized.join("")+"]?[0-9]{0," + options.decimal + "}";
+                    regexp = new RegExp(regexp + "$");
+                    found = value.match(regexp);
+                    if(!found){
+                        regexp = "^["+options.separatorAuthorized.join("")+"][0-9]{0," + options.decimal + "}";
+                        regexp = new RegExp(regexp + "$");
+                        found = value.match(regexp);
+                    }
+                }else{
+                    regexp = new RegExp(regexp + "$");
+                    found = value.match(regexp);
                 }
-
-                regexp = new RegExp(regexp + "$");
-
-                return value.match(regexp);
+                return found;
             }
+
 
             var formatValue = function(value, options) {
                 var formatedValue = value;
