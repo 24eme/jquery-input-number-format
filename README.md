@@ -26,6 +26,7 @@ $('.input-float').inputNumberFormat();
 | decimalAuto | Integer       | 2             | Number of decimal to add automatically on blur event |
 | separator | String        | "."           | Separator to use                                        |
 | separatorAuthorized  | Array (string)| [".", ","]    | Separators authorized |
+| allowNegative | Boolean        | false           | Allow negative number |
 
 There are 2 differents ways to use options
 
@@ -40,4 +41,3 @@ $('.input-float').inputNumberFormat({ 'decimal': 4, 'decimalAuto': 4 });
 ```html
 <input class="input-float" type="text" data-decimal="4" data-decimal-auto="4" value="" />
 ```
-
