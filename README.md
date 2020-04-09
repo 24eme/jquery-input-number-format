@@ -2,7 +2,9 @@
 
 Jquery plugin for Input Field Number to restrict entry to float or integer number and autoformat.
 
-Demo page : http://24eme.fr/jquery-input-number-format/example.html
+## Example
+
+[Demo page](https://24eme.github.io/jquery-input-number-format/example.html)
 
 ## Installation
 
