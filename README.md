@@ -20,7 +20,7 @@ Just include the javascript file :
 $('.input-float').inputNumberFormat();
 ```
 
-## Options
+## Options
 
 | Name                          | Type          | Default value | Description                                             |
 | ----------------- | ------------- | ------------- | ------------------------------------------------------- |
