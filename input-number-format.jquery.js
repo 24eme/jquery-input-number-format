@@ -5,7 +5,8 @@
                 'decimal': 2,
                 'decimalAuto': 2,
                 'separator': '.',
-                'separatorAuthorized': ['.', ',']
+                'separatorAuthorized': ['.', ','],
+                'allowNegative': 'false'
             };
 
             var settings = $.extend({}, this.defaultOptions, options);
@@ -13,12 +14,18 @@
             var matchValue = function(value, options) {
                 var found = [];
                 var regexp = "^[0-9]+";
+                if (options.allowNegative == 'true'){
+                    regexp = "^[\\-{0,1}][0-9]*";
+                }
                 if(options.decimal) {
                     regexp += "["+options.separatorAuthorized.join("")+"]?[0-9]{0," + options.decimal + "}";
                     regexp = new RegExp(regexp + "$");
                     found = value.match(regexp);
                     if(!found){
                         regexp = "^["+options.separatorAuthorized.join("")+"][0-9]{0," + options.decimal + "}";
+                        if (options.allowNegative == 'true'){
+                            regexp = "^[\\-{0,1}]["+options.separatorAuthorized.join("")+"][0-9]{0," + options.decimal + "}";
+                        }
                         regexp = new RegExp(regexp + "$");
                         found = value.match(regexp);
                     }
