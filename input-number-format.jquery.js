@@ -15,7 +15,7 @@
                 var found = [];
                 var regexp = "^[0-9]+";
                 if (options.allowNegative){
-                    regexp = "^[\\-{0,1}][0-9]*";
+                    regexp = "^-{0,1}[0-9]*";
                 }
                 if(options.decimal) {
                     regexp += "["+options.separatorAuthorized.join("")+"]?[0-9]{0," + options.decimal + "}";
@@ -23,9 +23,6 @@
                     found = value.match(regexp);
                     if(!found){
                         regexp = "^["+options.separatorAuthorized.join("")+"][0-9]{0," + options.decimal + "}";
-                        if (options.allowNegative){
-                            regexp = "^[\\-{0,1}]["+options.separatorAuthorized.join("")+"][0-9]{0," + options.decimal + "}";
-                        }
                         regexp = new RegExp(regexp + "$");
                         found = value.match(regexp);
                     }
@@ -42,6 +39,10 @@
 
                 if(!formatedValue) {
                     return formatedValue;
+                }
+
+                if(formatedValue == "-") {
+                    return "";
                 }
 
                 formatedValue = formatedValue.replace(",", options.separator);
